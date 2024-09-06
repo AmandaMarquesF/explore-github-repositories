@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="pull-requests">
+    <h2>Solicitações de Pull para {{ repo }}</h2>
+
+    <app-loader [isLoading]="isLoading"></app-loader>
+
+    <div class="d-flex justify-content-center">
+      <div *ngIf="pullRequests.length === 0">
+        <p>Não há pull requests para este repositório.</p>
+      </div>
+    </div>
+    <ul>
+      <li
+        *ngFor="
+          let pr of pullRequests
+            | paginate : { itemsPerPage: 5, currentPage: page }
+        "
+        role="listitem"
+        tabindex="0"
+        [attr.aria-label]="getAriaLabel(pr)"
+        class="pull-request-item"
+      >
+        <h3>{{ pr.title }}</h3>
+        <p>
+          By {{ pr.user.login }} | Created at
+          {{ pr.created_at | date : "medium" }}
+        </p>
+        <p>
+          <a
+            [href]="pr.html_url"
+            target="_blank"
+            class="btn btn-primary"
+            title="Ver Solicitação de Pull para {{ pr.title }}"
+          >
+            Ver Solicitação de Pull
+          </a>
+        </p>
+      </li>
+    </ul>
+
+    <div class="d-flex justify-content-center">
+      <pagination-controls
+        (pageChange)="page = $event"
+        previousLabel="Anterior"
+        nextLabel="Próximo"
+        pageLabel="Página"
+        ofLabel="de"
+        *ngIf="pullRequests.length > 0"
+      ></pagination-controls>
+    </div>
+  </div>
+</div>

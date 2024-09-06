@@ -1,0 +1,29 @@
+<div class="repository-list">
+  <ul>
+    <li
+      *ngFor="let repo of repositories | paginate: { itemsPerPage: 5, currentPage: page }"
+      (click)="goToPullRequests(repo.owner.login, repo.name)"
+      role="listitem"
+      tabindex="0"
+      [attr.aria-label]="getAriaLabel(repo)"
+      class="repository-item"
+    >
+      <h3>{{ repo.name }}</h3>
+      <p>{{ repo.description }}</p>
+      <p>
+        <strong><i class="fa-solid fa-star star-icon" aria-hidden="true" title="Estrelas"></i></strong>
+        {{ repo.stargazers_count }}
+      </p>
+    </li>
+  </ul>
+  <div class="d-flex justify-content-center">
+    <pagination-controls
+    (pageChange)="page = $event"
+    previousLabel="Anterior"
+    nextLabel="Próximo"
+    pageLabel="Página"
+    ofLabel="de"
+    *ngIf="repositories.length > 0"
+  ></pagination-controls>
+  </div>
+</div>

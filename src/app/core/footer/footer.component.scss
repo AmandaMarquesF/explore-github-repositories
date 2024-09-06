@@ -1,0 +1,21 @@
+footer {
+ 
+    color: #212529;
+    padding: 1rem 0;
+  }
+  
+  footer a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 576px) {
+    footer {
+      padding: 0.5rem 0;
+    }
+  }
+  

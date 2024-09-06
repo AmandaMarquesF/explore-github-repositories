@@ -1,0 +1,28 @@
+<div class="search-bar-container">
+  <div class="search-bar d-flex align-items-center mb-3 mt-5">
+    <div class="input-group">
+      <label for="languageInput" class="visually-hidden"
+        >Buscar repositórios por linguagem</label
+      >
+      <input
+        id="languageInput"
+        [(ngModel)]="language"
+        type="text"
+        class="form-control"
+        placeholder="Digite uma linguagem de programação"
+        aria-label="Linguagem de programação"
+      />
+      <button
+        (click)="search()"
+        class="btn btn-primary"
+        type="button"
+        aria-label="Pesquisar repositórios"
+      >
+        <i class="fas fa-search"></i>
+        <span class="visually-hidden">Pesquisar</span>
+      </button>
+    </div>
+  </div>
+  <app-loader [isLoading]="isLoading"></app-loader>
+  <app-repository-list [repositories]="repositories"></app-repository-list>
+</div>

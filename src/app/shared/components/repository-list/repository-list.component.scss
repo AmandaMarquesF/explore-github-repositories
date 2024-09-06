@@ -1,0 +1,36 @@
+.repository-list {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 15px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.repository-item {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.repository-item:hover,
+.repository-item:focus {
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.star-icon {
+  color: gold;
+}
+
+@media (max-width: 576px) {
+  .repository-item {
+    padding: 12px;
+  }
+}
+
