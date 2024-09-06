@@ -1,27 +1,76 @@
-# GithubRepositories
+# Explorador de Repositórios GitHub
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
+Uma aplicação Angular para buscar e explorar os repositórios mais populares do GitHub. Ao clicar em um repositório, você pode visualizar os pull requests associados a ele.
 
-## Development server
+## Tecnologias Utilizadas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Angular**: Framework para construção de aplicações web.
+- **Bootstrap**: Framework para estilização e design responsivo.
+- **ngPagination**: Biblioteca para paginação.
+- **Visual Studio Code**: Ambiente de desenvolvimento utilizado.
 
-## Code scaffolding
+## Pré-requisitos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Antes de começar, você precisa ter os seguintes softwares instalados:
 
-## Build
+- [Node.js](https://nodejs.org/) (versão 14.x ou superior)
+- [Angular CLI](https://angular.io/cli) (versão 14.x ou superior)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Instalação
 
-## Running unit tests
+1. Clone o repositório:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+   ```bash
+   git clone https://github.com/usuario/repositorio.git
+   cd repositorio
 
-## Running end-to-end tests
+1. Instale as dependências do projeto:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   ```bash
+   npm install
 
-## Further help
+## Uso
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+Inicie o servidor de desenvolvimento:
+
+1. Clone o repositório:
+
+   ```bash
+   ng serve
+
+Acesse a aplicação em http://localhost:4200.
+
+## Funcionalidades
+
+- Buscar Repositórios: Aplique filtros e busque os repositórios mais populares do GitHub.
+- Visualizar Repositórios: Clique em um repositório para ver detalhes e pull requests associados.
+- Paginação: Navegue pelos resultados de busca com paginação usando ngPagination.
+  
+## Estrutura do Projeto
+
+- **`src/app/core`**: Contém componentes e serviços essenciais, como o `footer` e o `navbar`.
+- **`src/app/shared`**: Contém componentes reutilizáveis como `search`, `listing`, e `loader`.
+- **`src/app/pages`**:
+  - **`home`**: Página principal onde a busca de repositórios e resultados são exibidos.
+  - **`pull-request`**: Página que exibe os pull requests para um repositório selecionado.
+- **`src/app`**: Contém os componentes e serviços principais da aplicação.
+- **`src/environments`**: Contém arquivos de configuração de ambiente.
+- **`src/assets`**: Contém arquivos estáticos como imagens e estilos.
+- **`src/styles.css`**: Contém estilos globais.
+
+## Contribuição
+
+Contribuições são bem-vindas! Para contribuir:
+
+1. Faça um fork do repositório.
+2. Crie uma branch para sua feature (`git checkout -b minha-feature`).
+3. Faça commit das suas alterações (`git commit -am 'Adiciona nova feature'`).
+4. Envie para o repositório remoto (`git push origin minha-feature`).
+5. Abra um pull request.
+
+## Contatos e Suporte
+
+Para dúvidas ou suporte, conecte-se comigo no [LinkedIn](https://www.linkedin.com/in/amanda-marques-furtado/).
+
+   
